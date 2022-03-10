@@ -121,12 +121,12 @@ elNavbarSelect.addEventListener('click', function() {
 
 
 const playAudio = (url) => {
-    let oneOfAudio = new Audio('/audio/button-46.mp3');
+    const oneOfAudio = new Audio('/audio/button-46.mp3');
     oneOfAudio.play();
 }
 
 const playAudioTwo = (url) => {
-    let twoOfAudio = new Audio('/audio/Phone Vibrating Sound Effect.mp3');
+    const twoOfAudio = new Audio('/audio/Phone Vibrating Sound Effect.mp3');
     twoOfAudio.play();
 }
 
