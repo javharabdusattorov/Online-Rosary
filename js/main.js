@@ -21,7 +21,7 @@ let elCountOfRosaryBox = document.querySelector('.countOf-rosary-box');
 let elCounOfRosaryBox_number = document.querySelector('.countOf-rosary-box-title');
 
 // CLOCK
-function clock() {  
+function clock() {
     let time = new Date();
     let hours = time.getHours();
     let minutes = time.getMinutes();
@@ -39,36 +39,36 @@ function clock() {
     elYear.innerHTML = years;
     elMonth.innerHTML = months;
     elDate.innerHTML = dates;
-   
-    
-    if(hours <= 9) {
+
+
+    if (hours <= 9) {
         elHour.innerHTML = `0${hours}`;
     } else {
         elHour.innerHTML = hours;
     }
-    if(minutes <= 9) {
+    if (minutes <= 9) {
         elMinute.innerHTML = `0${minutes}`;
     } else {
         elMinute.innerHTML = minutes;
     }
-    if(seconds <= 9) {
+    if (seconds <= 9) {
         elSecond.innerHTML = `0${seconds}`;
     } else {
         elSecond.innerHTML = seconds;
     }
 
-    if(months <= 9) {
+    if (months <= 9) {
         elMonth.innerHTML = `0${months}`;
     } else {
         elMonth.innerHTML = months;
     }
-    if(dates <= 9) {
+    if (dates <= 9) {
         elDate.innerHTML = `0${dates}`;
     } else {
         elDate.innerHTML = dates;
     }
 
-    if(days == 1) {
+    if (days == 1) {
         elDay.innerHTML = `${days}.Dushanba`;
     } else if (days == 2) {
         elDay.innerHTML = `${days}.Seshanba`;
@@ -83,11 +83,9 @@ function clock() {
     } else if (days == 7) {
         elDay.innerHTML = `${days}.Yakshanba`;
     }
-    setTimeout( () => clock(), 1000);
+    setTimeout(() => clock(), 1000);
 }
 clock();
-
-
 
 // ALL counts
 let timeOfTotal = 0;
@@ -104,12 +102,12 @@ elThreeOfTotal.innerHTML = `1000talik tasbeh hisobi:${totalCount}`
 elRosaryResultCount.innerHTML = `${rosaryResultCount}/33`;
 elTotalCount.innerHTML = `Jami: ${totalCount}`
 
-elNavbarSelect.addEventListener('click', function() {
+elNavbarSelect.addEventListener('click', function () {
     if (this.innerHTML == 33) {
         this.innerHTML = 99;
         elRosaryResultCount.innerHTML = `${rosaryResultCount}/99`;
     }
-    else if(this.innerHTML == 99) {
+    else if (this.innerHTML == 99) {
         elRosaryResultCount.innerHTML = `${rosaryResultCount}/1000`;
         this.innerHTML = 1000;
     }
@@ -121,40 +119,40 @@ elNavbarSelect.addEventListener('click', function() {
 
 
 const playAudio = () => {
-    const oneOfAudio = new Audio('/audio/button-46.mp3');
+    const oneOfAudio = new Audio('../audio/button-46.mp3');
     oneOfAudio.play();
 }
 
 const playAudioTwo = () => {
-    const twoOfAudio = new Audio('/audio/Phone Vibrating Sound Effect.mp3');
+    const twoOfAudio = new Audio('../audio/Phone Vibrating Sound Effect.mp3');
     twoOfAudio.play();
 }
 
 let booleanOfValume = true;
-elValume.addEventListener('click', function() {
+elValume.addEventListener('click', function () {
     booleanOfValume = !booleanOfValume;
 
     if (booleanOfValume == false) {
-        elValumeImg.setAttribute('src', '/img/mute-2-32.ico');
+        elValumeImg.setAttribute('src', '../img/mute-2-32.ico');
     } else {
-        elValumeImg.setAttribute('src', '/img/volume-up-4-32.ico');
+        elValumeImg.setAttribute('src', '../img/volume-up-4-32.ico');
     }
 })
 
 
 // Rosary BTN
-elCountOfRosaryBox.addEventListener('click', function() {
+elCountOfRosaryBox.addEventListener('click', function () {
     if (booleanOfValume == true) {
         playAudio();
     }
-    
+
     rosaryResultCount++
     thirtythreeCount++
     totalCount++
     elRosaryResultCount.innerHTML = `${rosaryResultCount}/33`;
     if (elNavbarSelect.innerHTML == 33) {
-           oneTotal++
-           elOneOfTotal.innerHTML = `33talik tasbeh hisobi:${oneTotal}`;
+        oneTotal++
+        elOneOfTotal.innerHTML = `33talik tasbeh hisobi:${oneTotal}`;
         if (thirtythreeCount == 34 && rosaryResultCount == 34) {
             timeOfTotal++
             elTimeOfTotal.innerHTML = `${timeOfTotal}x`;
@@ -162,13 +160,13 @@ elCountOfRosaryBox.addEventListener('click', function() {
             rosaryResultCount = 0;
             thirtythreeCount = 0;
             elRosaryResultCount.innerHTML = `${rosaryResultCount}/33`;
-        } 
+        }
     }
     else if (elNavbarSelect.innerHTML == 99) {
         twoTotal++
         elTwoOfTotal.innerHTML = `99talik tasbeh hisobi:${twoTotal}`
         elRosaryResultCount.innerHTML = `${rosaryResultCount}/99`;
-        if (thirtythreeCount == 100  && rosaryResultCount == 100) {
+        if (thirtythreeCount == 100 && rosaryResultCount == 100) {
             timeOfTotal++
             elTimeOfTotal.innerHTML = `${timeOfTotal}x`;
             playAudioTwo();
@@ -181,7 +179,7 @@ elCountOfRosaryBox.addEventListener('click', function() {
         threeTotal++
         elThreeOfTotal.innerHTML = `1000talik tasbeh hisobi:${threeTotal}`;
         elRosaryResultCount.innerHTML = `${rosaryResultCount}/1000`;
-        if (thirtythreeCount == 1001  && rosaryResultCount == 1001) {
+        if (thirtythreeCount == 1001 && rosaryResultCount == 1001) {
             timeOfTotal++
             elTimeOfTotal.innerHTML = `${timeOfTotal}x`;
             playAudioTwo();
