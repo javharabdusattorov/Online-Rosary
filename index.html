@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Rosary</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@500&family=IBM+Plex+Sans+Thai+Looped&family=Inconsolata:wght@500&family=Mukta&family=Press+Start+2P&family=Smooch+Sans:wght@500&family=Supermercado+One&family=Work+Sans:wght@500&display=swap"
+     rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+        <!-- Header-navbar -->
+        <nav class="navbar">
+                <h2 class="navbar-title">Zikrlar sanog'i</h2>
+              <div class="navbar__container">
+                <button class="valume">
+                    <img class="valume-img" src="img/volume-up-4-32.ico" alt="">
+                </button>
+                <button class="navbar__select">33</button>
+              </div>
+        </nav>
+        <div class="navbar__bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 total-counters">
+                        <p class="thirtyThree__total"></p>
+                        <p class="nineteenNine__total"></p>
+                        <p class="thousand__total"></p>
+                        <div class="all-totals d-flex align-items-center">
+                            <p class="total-title"></p>
+                            <span class="time__of-total">0x</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 rosary-box">
+                        <div class="rosary__counter">
+                            <h3 class="rosary__counter-title"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section -->
+    <section class="section">
+        <div class="clock">
+            <h3 class="hour"></h3>
+            <h3 class="minute"></h3>
+            <h3 class="second"></h3>
+        </div>
+        <div class="data-time">
+            <h3 class="year"></h3>
+            <h3 class="month"></h3>
+            <h3 class="date"></h3>
+        </div>
+        <h3 class="day"></h3>
+        
+        <div class="countOf-rosary">
+            <button class="countOf-rosary-box">
+                <h3 class="countOf-rosary-box-title">
+                    0
+                </h3>
+            </button>
+        </div>
+
+    </section>
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

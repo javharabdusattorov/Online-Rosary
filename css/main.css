@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+}
+
+*::selection {
+    background: transparent;
+    color: crimson;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    margin-top: 70px;
+}
+
+/* Header-start */
+
+.header {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    padding: 15px 35px;
+    background: rgb(37, 85, 85);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-title {
+    font-size: 25px;
+    color: white;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.valume {
+    width: 28px;
+    height: 25px;
+    margin-right: 15px;
+    border: none;
+    background: transparent;
+}
+
+.valume img {
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.navbar__select {
+    width: 43px;
+    height: 40px;
+    background: white;
+    border: 1px solid white;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+}
+
+.navbar__select:focus {
+    border: 2px solid crimson;
+}
+
+.navbar__select-option {
+    background-color: darkslategrey;
+    color: white;
+}
+
+.navbar__bottom {
+    padding: 20px 0;
+    background: rgba(14, 112, 104, 0.883);
+    border-bottom: 6px solid rgb(22, 170, 22);
+}
+
+.thirtyThree__total,
+.nineteenNine__total,
+.thousand__total, .time__of-total {
+    font-size: 25px;
+    color: white;
+    margin-bottom: -5px;
+    margin-left: 3px;
+}
+
+.total-title {
+    font-size: 35px;
+    color: white;
+    margin-bottom: 0 !important;
+    margin-right: 30px;
+}
+
+.rosary-box {
+    display: flex;
+    justify-content: end;
+}
+
+.rosary__counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border: 4px solid rgb(30, 173, 30);
+    border-radius: 50%;
+    color: white;
+}
+
+.rosary__counter-title {
+    font-size: 38px;
+    color: white;
+}
+
+/* Header-end */
+
+/* ************************************** */
+
+/* Section-start */
+
+.section {
+    width: 100%;
+    padding: 35.5px 50px;
+    background: url(../img/masjid-background.png) no-repeat center;
+    background-color: rgba(37, 85, 85, 0.876);
+    background-size: 100% 350px;
+    background-position-y: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -19px;
+}
+
+.hour,
+.minute,
+.second {
+    font-size: 43px;
+    color: whitesmoke;
+    display: flex;
+    cursor: wait;
+    /* width: 90px; */
+}
+
+.hour:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 32px;
+    background: crimson;
+    margin: 0 13px;
+    margin-top: 7px;
+}
+
+.minute:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 32px;
+    background: crimson;
+    margin: 0 12px;
+    margin-top: 7px;
+}
+
+.data-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -57px;
+}
+
+.year,
+.month,
+.date{
+    font-size: 43px;
+    color: whitesmoke;
+    display: flex;
+    cursor: wait;
+}
+
+.day {
+    font-size: 30px;
+    color: whitesmoke;
+    cursor: wait;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.year:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 32px;
+    background: crimson;
+    margin: 0 13px;
+    margin-top: 7px;
+}
+
+.month:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 32px;
+    background: crimson;
+    margin: 0 13px;
+    margin-top: 7px;
+}
+
+.countOf-rosary {
+    margin-top: 30px;
+    background: transparent;
+    border: 2px solid green;
+    border-radius: 50%;
+    width: 162px;
+    height: 160px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.countOf-rosary-box {
+    width: 139px;
+    height: 155px;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+.countOf-rosary-box-title {
+    font-size: 55px;
+    color: white;
+    border: none;
+}
+
+/* Section-end */
+
+/* ********************** */
+
+/* Media-start */
+
+@media(max-width:467px) {
+    .section {
+        padding: 35px 19px;
+        background-size: 300% 330px;
+    }
+    
+    .navbar__bottom {
+        padding: 20px 0;
+    }
+
+    .data-time {
+        margin-left: -68px;
+    }
+
+    .total-counters {
+        text-align: center;
+    }
+
+    .rosary-box {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .countOf-rosary {
+        margin-top: 40px;
+    }
+
+    .all-totals {
+        justify-content: center;
+    }
+}
+
+@media(max-width:330px) {
+    .clock {
+        margin-left: 0;
+    }
+
+    .data-time {
+        margin-left: -46px;
+    }
+}
+
+/* Media-end */
