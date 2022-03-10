@@ -21,7 +21,7 @@ let elCountOfRosaryBox = document.querySelector('.countOf-rosary-box');
 let elCounOfRosaryBox_number = document.querySelector('.countOf-rosary-box-title');
 
 // CLOCK
-function clock() {
+function clock() {  
     let time = new Date();
     let hours = time.getHours();
     let minutes = time.getMinutes();
@@ -119,24 +119,33 @@ elNavbarSelect.addEventListener('click', function() {
     }
 })
 
-let audio = new Audio('../audio/button-46.mp3');
-let twoAudio = new Audio('../audio/Phone Vibrating Sound Effect.mp3');
+
+const playAudio = (url) => {
+    let oneOfAudio = new Audio('/audio/button-46.mp3');
+    oneOfAudio.play();
+}
+
+const playAudioTwo = (url) => {
+    let twoOfAudio = new Audio('/audio/Phone Vibrating Sound Effect.mp3');
+    twoOfAudio.play();
+}
 
 let booleanOfValume = true;
 elValume.addEventListener('click', function() {
     booleanOfValume = !booleanOfValume;
 
     if (booleanOfValume == false) {
-        elValumeImg.setAttribute('src', '../img/mute-2-32.ico');
+        elValumeImg.setAttribute('src', '/img/mute-2-32.ico');
     } else {
-        elValumeImg.setAttribute('src', '../img/volume-up-4-32.ico');
+        elValumeImg.setAttribute('src', '/img/volume-up-4-32.ico');
     }
 })
+
 
 // Rosary BTN
 elCountOfRosaryBox.addEventListener('click', function() {
     if (booleanOfValume == true) {
-        audio.play();
+        playAudio();
     }
     
     rosaryResultCount++
@@ -149,7 +158,7 @@ elCountOfRosaryBox.addEventListener('click', function() {
         if (thirtythreeCount == 34 && rosaryResultCount == 34) {
             timeOfTotal++
             elTimeOfTotal.innerHTML = `${timeOfTotal}x`;
-            twoAudio.play();
+            playAudioTwo();
             rosaryResultCount = 0;
             thirtythreeCount = 0;
             elRosaryResultCount.innerHTML = `${rosaryResultCount}/33`;
@@ -162,7 +171,7 @@ elCountOfRosaryBox.addEventListener('click', function() {
         if (thirtythreeCount == 100  && rosaryResultCount == 100) {
             timeOfTotal++
             elTimeOfTotal.innerHTML = `${timeOfTotal}x`;
-            twoAudio.play();
+            playAudioTwo();
             rosaryResultCount = 0;
             thirtythreeCount = 0;
             elRosaryResultCount.innerHTML = `${rosaryResultCount}/99`;
@@ -175,7 +184,7 @@ elCountOfRosaryBox.addEventListener('click', function() {
         if (thirtythreeCount == 1001  && rosaryResultCount == 1001) {
             timeOfTotal++
             elTimeOfTotal.innerHTML = `${timeOfTotal}x`;
-            twoAudio.play();
+            playAudioTwo();
             rosaryResultCount = 0;
             thirtythreeCount = 0;
             elRosaryResultCount.innerHTML = `${rosaryResultCount}/1000`;
