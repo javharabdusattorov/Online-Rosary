@@ -119,12 +119,12 @@ elNavbarSelect.addEventListener('click', function () {
 
 
 const playAudio = () => {
-    const oneOfAudio = new Audio('audio/button-46.mp3');
+    const oneOfAudio = new Audio('audio/click-sound.mp3');
     oneOfAudio.play();
 }
 
 const playAudioTwo = () => {
-    const twoOfAudio = new Audio('audio/Phone Vibrating Sound Effect.mp3');
+    const twoOfAudio = new Audio('audio/vibrating-sound.mp3');
     twoOfAudio.play();
 }
 
